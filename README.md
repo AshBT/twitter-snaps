@@ -1,4 +1,4 @@
-##Snapchat screenshots from Twitter's Streaming API
+##Snapchat screenshots from Twitter Streaming API
 ###By [@jasdev](https://twitter.com/jasdev)
 ---
 
