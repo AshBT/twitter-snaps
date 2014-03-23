@@ -52,7 +52,7 @@ def get_photo_stream():
                 img_array = np.asarray(bytearray(content), dtype=np.uint8)
                 img = cv2.imdecode(img_array, 0)
 
-                if img is not None and (img.shape[::-1] == (576, 1024) or img.shape[::-1] == (600, 900)):  # Compressed iPhone 4/5 sizes
+                if img is not None and img.shape[::-1] in [(576, 1024), (600, 900)]:  # Compressed iPhone 4/5 sizes
                     if is_snap(img):
                         print media_url
         except KeyError:
