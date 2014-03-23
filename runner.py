@@ -5,14 +5,6 @@ import numpy as np
 from TwitterAPI import TwitterAPI
 
 
-api = TwitterAPI(
-    os.environ['consumer_key'],
-    os.environ['consumer_secret'],
-    os.environ['access_token_key'],
-    os.environ['access_token_secret']
-)
-
-
 def is_snap(img, verbose=False):
     """Baseline approach is to check for the presence of the timer in the upper right corner of the image"""
     templates = ["templates/%s.png" % i for i in range(1, 11)]
@@ -41,6 +33,13 @@ def is_snap(img, verbose=False):
 
 
 def get_photo_stream():
+    api = TwitterAPI(
+        os.environ['consumer_key'],
+        os.environ['consumer_secret'],
+        os.environ['access_token_key'],
+        os.environ['access_token_secret']
+    )
+
     # Any geo-tagged tweet, don't have access to firehose :(
     r = api.request('statuses/filter', {'locations': '-180,-90,180,90'})
 
