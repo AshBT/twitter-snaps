@@ -27,8 +27,5 @@ URLs outputted from the script will be those that the template matcher detects a
 
 ###Tests
 run `nosetests test.py` in the root level of repo after installing needed dependencies
-=======
-twitter-snaps
-=============
 
 A miner for snapchat screenshots shared on twitter
