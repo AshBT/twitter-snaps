@@ -19,6 +19,16 @@ You will need the following dependencies:
 
 * TwitterAPI, `pip install TwitterAPI`
 
+
+Also, you will need to set the following environment variables from your Twitter dev accout:
+
+
+* consumer_key
+* consumer_secret
+* access_token_key
+* access_token_secret
+
+
 To kickoff scraper, use `python runner.py`
 
 
